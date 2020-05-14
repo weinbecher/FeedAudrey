@@ -1,15 +1,16 @@
 
-<p> oh Audrey would love to have a {{nutName}}<input placeholder = "nut name" type="text" class="form-control" [(ngModel)]="nutName"></p> 
+<p> oh Audrey would love to have a {{nutName}}
+    <input placeholder = "nut name" type="text" class="form-control" [(ngModel)]="nutName">
+</p> 
 
-<button class="btn btn-primary" [disabled]= "!addNewNut" (click) = "handleAddNut()"> Give {{nutName}} </button>
-
+<button class="btn btn-primary" [disabled]= "!addNewNut" (click) = "handleAddNut()"> 
+    Give {{nutName}} </button>
 <br>
 
-
-<p *ngIf = "nutCreated ; else noNut"> Human pass a {{nutName}} : Here you go, Audrey </p>
 <ng-template #noNut> <p> Audrey : Where is my nut??? !!! </p> </ng-template>
 
+<p *ngIf = "nutCreated ; else noNut"> Human pass a {{nutName}} : Here you go, Audrey </p>
 
 <p>{{nutStatus}}</p>
 <br>
-<nut *ngFor = 'nut of nuts '> </nut> 
+<nut *ngFor = 'nut of nuts'> </nut> 

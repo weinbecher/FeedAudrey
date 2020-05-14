@@ -6,19 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nut.component.css']
 })
 export class NutComponent implements OnInit {
-  nutNumber: number = Math.floor(Math.random()*100);
-  fondLevel: string = 'hate';
+  nutNumber: number = Math.floor(Math.random() * 100);
+  feeling: string = 'hate';
 
   constructor() {
-    this.fondLevel = Math.random() > 0.5 ? 'love 💕' : "hate 😡";
+    this.feeling = Math.random() > 0.5 ? 'love 💕' : 'hate 😡';
    }
 
 
   ngOnInit(): void {
   }
 
-  getColor(){
-    return this.fondLevel === "love" ? "pink" : "red";
+  getColor() {
+    return (this.feeling === 'love 💕' ? 'red' : 'black');
 
   }
 
