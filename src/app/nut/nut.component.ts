@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'nut',
   templateUrl: './nut.component.html',
   styleUrls: ['./nut.component.css']
@@ -18,7 +19,7 @@ export class NutComponent implements OnInit {
   }
 
   getColor() {
-    return (this.feeling === 'love 💕' ? 'red' : 'black');
+    return (this.feeling === 'love 💕' ? 'pink' : 'black');
 
   }
 

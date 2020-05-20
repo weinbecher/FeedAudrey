@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'nuts',
   templateUrl: './nuts.component.html',
   styleUrls: ['./nuts.component.css']
 })
 export class NutsComponent implements OnInit {
-
+  human = ' ';
   nutName = ' ';
   nutCreated = false;
-  addNewNut = false;
+  // addNewNut = false;
   nutStatus = ' Audrey : What ??? no nut here!';
   nuts = [];
 
   constructor() {
-    setTimeout(() => {
-      this.addNewNut = true;
-    }, 2000);
-
+    // setTimeout(() => {
+    //   this.addNewNut = true;
+    // }, 2000);
     // why is this in the constructor
   }
 
@@ -38,9 +38,14 @@ export class NutsComponent implements OnInit {
     this.nutStatus = ' Audrey : Thanks, is this a ' + this.nutName + ' ?';
     // this.nuts.push(this.nutName, new Date());
     this.nuts.push(this.nutName);
-
-
   }
+
+
+  onHumanNameAdded(humanName: string) {
+    this.human = humanName;
+  }
+
+
 
 
 

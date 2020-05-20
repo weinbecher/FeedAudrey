@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Balsamiq Sans', cursive;
+    color: #333333d4;
+    /* background-color:#F4F2C2;   */
+}
+
+
+body {
+    --stripe: #F4F2C2;
+    --bg: rgb(248, 247, 217) !important;
+  
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+      linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 50px 50px;
+    background-color: var(--stripe) !important;
+  }
+
+
+h1 {
+    font-family: 'Sofia', cursive !important;
+    margin: 25px 0 25px 0 !important;
+}
+
+p {
+    font-weight: 50;
+    margin: 10px 0 10px 0px !important;
+}
+
+.audrey {
+    color:#f58498; 
+}
+
+.human {
+    color: #70B3F2;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #A8CD35 !important;
+    border-color: #A8CD35 !important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #a5ce28 !important;
+    border-color: #a5ce28!important;
+}

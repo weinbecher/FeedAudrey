@@ -1,1 +1,9 @@
-<p>human-name works!</p>
+<p class="audrey">Audrey : what's your name, human?</p>
+<p class="human"> Human: My name is </p>
+<input placeholder = "name " type="text" class="form-control" #humanNameInput>
+
+<br>
+
+<button
+class="btn btn-primary" (click)="onAddHuman(humanNameInput)">submit</button>
+
