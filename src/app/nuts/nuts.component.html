@@ -2,20 +2,33 @@
 
 <br>
 
-<h4> Do you want to give Audrey something?
+<!-- <ng-template #noHuman> <p class=" audrey "> Audrey :  anybody???!!! </p> </ng-template> -->
+
+<div  *ngIf = "human !== ' '">
+
+   <p class = "audrey" > Audrey: Hi {{human}}, are you gonna give me something or not?
+
+   </p>
+
+   <p class = "human"> {{human}}: Do you like {{nutName}}?</p>
+   <input placeholder = "nut name" type="text" class="form-control" [(ngModel)]="nutName">
     <br>
-    <input placeholder = "nut name" type="text" class="form-control" [(ngModel)]="nutName">
-</h4> 
+   
+
+    <button class="btn btn-primary" (click) = "handleAddNut()"> 
+
+        Give {{nutName}} </button>
+    <br>
+    
+
+</div>
+
 
 <!-- <button class="btn btn-primary" [disabled]= "!addNewNut" (click) = "handleAddNut()">  -->
-<button class="btn btn-primary" (click) = "handleAddNut()"> 
-
-    Give {{nutName}} </button>
-<br>
 
 <ng-template #noNut> <p class=" audrey "> Audrey : Where is my nut???!!! </p> </ng-template>
 
-<p class = "human"   *ngIf = "nutCreated ; else noNut"> {{human}} pass a {{nutName}} : Here you go, Audrey </p>
+<p class = "human"   *ngIf = "nutCreated ; else noNut"> {{human}} passes a {{nutName}} : Here you go, Audrey </p>
 
 <p class = "audrey"> {{nutStatus}}</p>
 <br>

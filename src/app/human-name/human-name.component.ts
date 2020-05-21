@@ -7,17 +7,17 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./human-name.component.css']
 })
 export class HumanNameComponent implements OnInit {
-  @Output() humanCreated = new EventEmitter <{ humanName: string}>();
+  name = '';
+  humanName = '';
+  @Output() humanCreated = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onAddHuman(humanNameInput: HTMLInputElement) {
-    console.log(humanNameInput.value);
-    this.humanCreated.emit({
-      humanName: humanNameInput.value
-    });
+    this.humanName =  humanNameInput.value;
+    this.humanCreated.emit(this.humanName);
 
   }
 
