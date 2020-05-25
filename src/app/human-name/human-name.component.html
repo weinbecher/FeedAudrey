@@ -1,3 +1,4 @@
+<form [hidden] ="!isDisplayed">
 <p class="audrey">Audrey : what's your name, human?</p>
 
 <!-- <input placeholder = "name " type="text" class="form-control" #humanNameInput> -->
@@ -7,5 +8,5 @@
 <p class="human"> Human: My name is {{name}}</p>
 
 <button
-class="btn btn-primary" (click)="onAddHuman(humanNameInput)">submit</button>
-
+class="btn btn-primary" (click)="onAddHuman(humanNameInput)" (click)="showMe" >submit</button>
+</form>

@@ -9,6 +9,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class HumanNameComponent implements OnInit {
   name = '';
   humanName = '';
+  isDisplayed = true;
+
   @Output() humanCreated = new EventEmitter<string>();
   constructor() { }
 
@@ -18,7 +20,11 @@ export class HumanNameComponent implements OnInit {
   onAddHuman(humanNameInput: HTMLInputElement) {
     this.humanName =  humanNameInput.value;
     this.humanCreated.emit(this.humanName);
+    this.isDisplayed = false;
+  }
 
+  showMe() {
+     this.isDisplayed = false;
   }
 
 }

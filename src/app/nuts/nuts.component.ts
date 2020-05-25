@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NutsComponent implements OnInit {
   human = ' ';
   nutName = ' ';
+  newNutName = ' ';
   nutCreated = false;
   // addNewNut = false;
   nutStatus = ' Audrey : What ??? no nut here!';
@@ -26,9 +27,9 @@ export class NutsComponent implements OnInit {
 
   // ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component.
 
-  handleUpdateName(event: Event) {
-    this.nutName = ( event.target as HTMLInputElement ).value;
-  }
+  // handleUpdateName(event: Event) {
+  //   this.nutName = ( event.target as HTMLInputElement ).value;
+  // }
 
   // the casting is to inform TypeScript that the type is an the html element
 
@@ -36,8 +37,10 @@ export class NutsComponent implements OnInit {
     this.nutCreated = true;
     // console.log (this.nuts);
     this.nutStatus = ' Audrey : Thanks, is this a real' + this.nutName + ' ?';
+    this.newNutName = this.nutName;
     // this.nuts.push(this.nutName, new Date());
     this.nuts.push(this.nutName);
+    this.nutName = ' ';
   }
 
 
@@ -46,7 +49,10 @@ export class NutsComponent implements OnInit {
   }
 
 
-
-
-
 }
+
+
+
+
+
+
