@@ -36,7 +36,7 @@ export class NutsComponent implements OnInit {
   handleAddNut() {
     this.nutCreated = true;
     // console.log (this.nuts);
-    this.nutStatus = ' Audrey : Thanks, is this a real' + this.nutName + ' ?';
+    this.nutStatus = ' Audrey : Thanks, is this a real ' + this.nutName + ' ?';
     this.newNutName = this.nutName;
     // this.nuts.push(this.nutName, new Date());
     this.nuts.push(this.nutName);

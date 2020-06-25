@@ -1,3 +1,4 @@
+import { ChatService } from './chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -22,7 +23,7 @@ import { HumanNameComponent } from './human-name/human-name.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
